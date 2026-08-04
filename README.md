@@ -1,3 +1,11 @@
+> **Maintained fork (kernel 7.1+):** Upstream (morrownr/8821cu-20210916) is
+> unmaintained and does not build on Linux kernel 7.1. This branch adds
+> kernel 7.1 support (cfg80211 `wireless_dev*` callbacks and PPPoE API
+> changes) based on upstream PR #205
+> (https://github.com/morrownr/8821cu-20210916/pull/205).
+> Tested on Fedora 44 / kernel 7.1.5 with DKMS.
+> Use the `main` branch for the unmodified upstream code.
+
 Notice: An updated standards compliant (mac80211), in-kernel driver for
 rtl8821/11cu chipset based adapters and modules is available and as of
 kernel 6.12 is of good quality. If your distro uses kernel 6.12 or
