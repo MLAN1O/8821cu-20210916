@@ -16,12 +16,6 @@
 
 #include <drv_types.h>
 #include <hal_data.h>
-#include <linux/string.h>
-
-#if (LINUX_VERSION_CODE >= KERNEL_VERSION(7, 2, 0))
-/* strncpy() removed from kernel 7.2 - strscpy() is the replacement */
-#define strncpy(dst, src, n) strscpy(dst, src, n)
-#endif
 
 #ifdef CONFIG_IOCTL_CFG80211
 
