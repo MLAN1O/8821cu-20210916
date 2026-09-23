@@ -17,6 +17,11 @@
 #include <drv_types.h>
 #include <rtw_mp.h>
 #include <linux/string.h>
+
+#if (LINUX_VERSION_CODE >= KERNEL_VERSION(7, 2, 0))
+/* strncpy() removed from kernel 7.2 - strscpy() is the replacement */
+#define strncpy(dst, src, n) strscpy(dst, src, n)
+#endif
 #include "../../hal/phydm/phydm_precomp.h"
 #ifdef RTW_HALMAC
 #include "../../hal/hal_halmac.h"

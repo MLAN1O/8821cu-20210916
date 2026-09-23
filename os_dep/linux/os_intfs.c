@@ -22,6 +22,11 @@
 #define strlcpy strscpy
 #endif
 
+#if (LINUX_VERSION_CODE >= KERNEL_VERSION(7, 2, 0))
+/* strncpy() removed from kernel 7.2 - strscpy() is the replacement */
+#define strncpy(dst, src, n) strscpy(dst, src, n)
+#endif
+
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Realtek Wireless Lan Driver");
 MODULE_AUTHOR("Realtek Semiconductor Corp.");
