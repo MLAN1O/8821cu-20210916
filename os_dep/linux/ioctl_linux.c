@@ -16,6 +16,7 @@
 
 #include <drv_types.h>
 #include <rtw_mp.h>
+#include <linux/string.h>
 #include "../../hal/phydm/phydm_precomp.h"
 #ifdef RTW_HALMAC
 #include "../../hal/hal_halmac.h"
