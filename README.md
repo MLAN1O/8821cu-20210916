@@ -1,9 +1,11 @@
-> **Maintained fork (kernel 7.1+):** Upstream (morrownr/8821cu-20210916) is
-> unmaintained and does not build on Linux kernel 7.1. This branch adds
+> **Maintained fork (kernel 7.1–7.2):** Upstream (morrownr/8821cu-20210916) is
+> unmaintained and does not build on Linux kernel 7.1+. This branch adds
 > kernel 7.1 support (cfg80211 `wireless_dev*` callbacks and PPPoE API
 > changes) based on upstream PR #205
-> (https://github.com/morrownr/8821cu-20210916/pull/205).
-> Tested on Fedora 44 / kernel 7.1.5 with DKMS.
+> (https://github.com/morrownr/8821cu-20210916/pull/205),
+> plus kernel 7.2 support (`strncpy` → `strscpy`, `WIPHY_FLAG_SUPPORTS_5_10_MHZ`
+> removal, `remain_on_channel` `rx_addr` param).
+> Tested on Fedora 44 / kernels 7.1.5 and 7.2.5 with DKMS.
 > Use the `main` branch for the unmodified upstream code.
 
 Notice: An updated standards compliant (mac80211), in-kernel driver for
